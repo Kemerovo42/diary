@@ -26,10 +26,10 @@ def __repr__(self):
 def index():
     #Отображение объектов из БД
     #Задание №2. Отоброзить объекты из БД в index.html
-    Card.query.order_by(Card.id).all()
+    cards = Card.query.order_by(Card.id).all()
 
     return render_template('index.html',
-                           #cards = cards
+                           cards = cards
 
                            )
 
